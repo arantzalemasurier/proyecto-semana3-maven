@@ -27,7 +27,7 @@ public class CarFacade {
 		Tank tank = new Tank (1L, 60D);
 		
 		// car piezas exclusivas
-		CombustionCar car = new CombustionCar(1L, "Seat", "Ibiza", "Rojo", 4, battery, air, motor, tank);
+		CombustionCar car = new CombustionCar(1L, "Default brand", "Default model", "Default color", 4, battery, air, motor, tank);
 		car.getMotor().start();
 		car.getAir().start();
 		
@@ -40,7 +40,7 @@ public class CarFacade {
 		ElectricMotor motor = new ElectricMotor (1L, 150F, 400F);
 		Plug plug = new Plug (1L, PlugType.TYPE1);
 		
-		ElectricCar car = new ElectricCar(1L, "Seat", "Leon", "Blanco", 4, battery, air, motor, plug);
+		ElectricCar car = new ElectricCar(1L, "Default brand 2", "Default model", "Default color", 4, battery, air, motor, plug);
 		car.getMotor().start();
 		car.getAir().start();
 		
@@ -53,7 +53,7 @@ public class CarFacade {
 		HybridMotor motor = new HybridMotor (1L, 150F);
 		HydrogenTank tank = new HydrogenTank (1L, 80D);
 	
-		HybridCar car = new HybridCar(1L, "Alfa", "Romeo", "Gris", 4, battery, air, motor, tank);
+		HybridCar car = new HybridCar(1L, "Default brand 3", "Default model", "Default color", 4, battery, air, motor, tank);
 		car.getMotor().start();
 		car.getAir().start();
 		
