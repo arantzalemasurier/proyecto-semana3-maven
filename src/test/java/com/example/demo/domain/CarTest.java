@@ -15,7 +15,7 @@ import com.example.demo.domain.pieces.FuelType;
 import com.example.demo.domain.pieces.Motor;
 import com.example.demo.domain.pieces.Tank;
 
-class CarTest {
+class CarTest {	
 
 	static Battery battery;
 	static AirConditioning air;
@@ -56,7 +56,6 @@ class CarTest {
 
 	@Test
 	void testGetBrand() {
-		// Comprobado en otros test
 	}
 
 	@Test
@@ -66,32 +65,31 @@ class CarTest {
 
 	@Test
 	void testGetColor() {
-		// Comprobado en otros test
 	}
 
 	@Test
 	void testGetBattery() {
-		// Comprobado en otros test
+		battery = new Battery(1L, 14D);
 	}
 
 	@Test
 	void testGetAir() {
-		// Comprobado en otros test
+		air = new AirConditioning(1L, 24F);
 	}
 
 	@Test
 	void testGetMotor() {
-		// Comprobado en otros test
+		motor = new CombustionMotor (1L, 150F, FuelType.DIESEL, 1100F);
 	}
 
 	@Test
 	void testGetDoor() {
-		// Comprobado en otros test
 	}
 
 	@Test
 	void testSetId() {
-		// Comprobado en otros test
+		car.setId(1L);
+		assertEquals(1L, car.getId());
 	}
 
 	@Test
@@ -150,7 +148,8 @@ class CarTest {
 
 	@Test
 	void testToString() {
-		// Con la implementación de Car y CombustionCar, no se probar este método.
+		String expected = "";
+        assertFalse(car.toString().matches(expected));
 		
 	}
 }
