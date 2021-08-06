@@ -104,13 +104,13 @@ class CarTest {
 	@Test
 	void testSetModel() {
 		car.setModel("testModel");
-		assertEquals(car.getModel(), "testModel");
+		assertEquals("testModel", car.getModel());
 	}
 
 	@Test
 	void testSetColor() {
 		car.setColor("testColor");
-		assertEquals(car.getColor(), "testColor");
+		assertEquals("testColor", car.getColor());
 	}
 
 	@Test
