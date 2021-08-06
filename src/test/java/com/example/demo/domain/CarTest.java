@@ -97,7 +97,7 @@ class CarTest {
 	@Test
 	void testSetBrand() {
 		car.setBrand("testBrand");
-		assertEquals(car.getBrand(), "testBrand");
+		assertEquals("testBrand", car.getBrand());
 		
 	}
 

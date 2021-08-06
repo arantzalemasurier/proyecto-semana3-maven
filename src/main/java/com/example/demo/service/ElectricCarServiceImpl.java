@@ -16,74 +16,63 @@ import com.example.demo.domain.pieces.Plug;
 import com.example.demo.domain.pieces.PlugType;
 
 @Service
-public class ElectricCarServiceImpl implements ElectricCarService{
+public class ElectricCarServiceImpl implements ElectricCarService {
 
+	private static final Map<Long, ElectricCar> cars = new HashMap<>();
 
-    private static final Map<Long, ElectricCar> cars = new HashMap<>();
+	static {
 
-    static{ 
-    	
-		ElectricCar car1 = new ElectricCar(1L, "Seat", "León", "blanco", 4,
-				new Battery(1L, 14D),
-				new AirConditioning(1L, 24F),
-				new ElectricMotor(1L, 150F, 400F),
-				new Plug(1L, PlugType.TYPE1));
-		
-		ElectricCar car2 = new ElectricCar(2L, "BMW", "X3i", "negro", 2,
-				new Battery(1L, 18D),
-				new AirConditioning(1L, 22F),
-				new ElectricMotor(1L, 180F, 400F),
-				new Plug(1L, PlugType.TYPE2));
+		ElectricCar car1 = new ElectricCar(1L, "Seat", "León", "blanco", 4, new Battery(1L, 14D),
+				new AirConditioning(1L, 24F), new ElectricMotor(1L, 150F, 400F), new Plug(1L, PlugType.TYPE1));
+
+		ElectricCar car2 = new ElectricCar(2L, "BMW", "X3i", "negro", 2, new Battery(1L, 18D),
+				new AirConditioning(1L, 22F), new ElectricMotor(1L, 180F, 400F), new Plug(1L, PlugType.TYPE2));
 		car2.getMotor().start();
-		
-		ElectricCar car3 = new ElectricCar(3L, "Skoda", "Octavia", "marrón", 4,
-				new Battery(1L, 18D),
-				new AirConditioning(1L, 20F),
-				new ElectricMotor(1L, 150F, 400F),
-				new Plug(1L, PlugType.CCS));
-		
+
+		ElectricCar car3 = new ElectricCar(3L, "Skoda", "Octavia", "marrón", 4, new Battery(1L, 18D),
+				new AirConditioning(1L, 20F), new ElectricMotor(1L, 150F, 400F), new Plug(1L, PlugType.CCS));
+
 		cars.put(1L, car1);
 		cars.put(2L, car2);
 		cars.put(3L, car3);
 
-    }
-    
-    @Override
-    public Integer count() {
-        return cars.keySet().size();
-    }
+	}
 
-    @Override
-    public List<ElectricCar> findAll() {
-        return new ArrayList<>(cars.values());
-    }
+	@Override
+	public Integer count() {
+		return cars.keySet().size();
+	}
 
-    @Override
-    public ElectricCar findOne(Long id) {
-        return cars.get(id);
-    }
+	@Override
+	public List<ElectricCar> findAll() {
+		return new ArrayList<>(cars.values());
+	}
 
-    @Override
-    public ElectricCar save(ElectricCar car) {
+	@Override
+	public ElectricCar findOne(Long id) {
+		return cars.get(id);
+	}
 
-        if (car.getId() == null || car.getId() == 0L)
-            car.setId(getMaxElectricCarId() + 1);
+	@Override
+	public ElectricCar save(ElectricCar car) {
 
-        cars.remove(car.getId());
-        cars.put(car.getId(), car);
-        return car;
-    }
+		if (car.getId() == null || car.getId() == 0L)
+			car.setId(getMaxElectricCarId() + 1);
 
-    public Long getMaxElectricCarId() {
-    	if (cars.isEmpty())
+		cars.remove(car.getId());
+		cars.put(car.getId(), car);
+		return car;
+	}
+
+	public Long getMaxElectricCarId() {
+    	if (cars.isEmpty()) {
 			return 0L;
+    	}
 
-        return Collections.max(cars.entrySet(),
-                (entry1, entry2) -> (int) (entry1.getKey() - entry2.getKey())
-        ).getKey();
-    }
+		return Collections.max(cars.entrySet(),(entry1,entry2)->(int)(entry1.getKey()-entry2.getKey())).getKey();
+	}
 
-    @Override
+	@Override
     public boolean delete(Long id) {
         if (id == null || !cars.containsKey(id))
             return false;
@@ -91,13 +80,13 @@ public class ElectricCarServiceImpl implements ElectricCarService{
         return true;
     }
 
-    @Override
+	@Override
     public void deleteAll() {
         if (!cars.isEmpty())
             cars.clear();
     }
-    
-    @Override
+
+	@Override
     public List<ElectricCar> findByColor(String color) {
     	List<ElectricCar> results = new ArrayList<ElectricCar>();
     	
@@ -105,9 +94,9 @@ public class ElectricCarServiceImpl implements ElectricCarService{
     		if (car.getColor().equals(color))
     				results.add(car);
     	return results;
-    } 
-    
-    @Override
+    }
+
+	@Override
     public List<ElectricCar> findByDoor(int door) {
     	List<ElectricCar> results = new ArrayList<ElectricCar>();
     	
@@ -115,9 +104,9 @@ public class ElectricCarServiceImpl implements ElectricCarService{
     		if (car.getDoor()==(door))
     				results.add(car);
     	return results;
-    } 
-    
-    @Override
+    }
+
+	@Override
     public List<ElectricCar> findByBrand(String brand) {
     	List<ElectricCar> results = new ArrayList<ElectricCar>();
     	
@@ -125,9 +114,9 @@ public class ElectricCarServiceImpl implements ElectricCarService{
     		if (car.getBrand().equals(brand))
     				results.add(car);
     	return results;
-    } 
-    
-    @Override
+    }
+
+	@Override
     public List<ElectricCar> findStarted() {
     	List<ElectricCar> results = new ArrayList<ElectricCar>();
     	
@@ -135,6 +124,6 @@ public class ElectricCarServiceImpl implements ElectricCarService{
     		if (car.getMotor().getOn())
     				results.add(car);
     	return results;
-    } 
+    }
 
 }
