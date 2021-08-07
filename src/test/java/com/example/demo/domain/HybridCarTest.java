@@ -64,21 +64,21 @@ class HybridCarTest {
 		
 		assertTrue(car.getBattery() instanceof Battery);
 		assertEquals(car.getBattery().getId(),1L);
-		assertNotEquals(car.getBattery().getCapacity(),15D);
-		assertEquals(car.getBattery().getCapacity(),14D);
+		assertNotEquals(15D, car.getBattery().getCapacity());
+		assertEquals(14D, car.getBattery().getCapacity());
 		
 		assertTrue(car.getAir() instanceof AirConditioning);
-		assertEquals(car.getAir().getId(),1L);
-		assertEquals(car.getAir().getTemperature(),24F);
+		assertEquals(1L, car.getAir().getId());
+		assertEquals(24F, car.getAir().getTemperature());
 		assertFalse(car.getAir().getOn());
 		
 		assertTrue(car.getTank() instanceof HydrogenTank);
-		assertEquals(car.getTank().getId(),1L);
-		assertEquals(car.getTank().getPresure(),80F);
+		assertEquals(1L, car.getTank().getId());
+		assertEquals(80F, car.getTank().getPresure());
 		
 		assertTrue(car.getMotor() instanceof Motor);
-		assertEquals(car.getMotor().getId(),1L);
-		assertEquals(car.getMotor().getPower(),150);
+		assertEquals(1L, car.getMotor().getId());
+		assertEquals(150, car.getMotor().getPower());
 		
 	}
 
@@ -88,8 +88,8 @@ class HybridCarTest {
 		car.setTank(testTank);
 		
 		assertTrue(car.getTank() instanceof HydrogenTank);
-		assertEquals(car.getTank().getId(),200L);
-		assertEquals(car.getTank().getPresure(),100D);
+		assertEquals(200L, car.getTank().getId());
+		assertEquals(100D, car.getTank().getPresure());
 	}
 
 }
