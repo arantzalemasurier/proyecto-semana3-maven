@@ -60,7 +60,7 @@ class CarTest {
 
 	@Test
 	void testGetModel() {
-		// Comprobado en otros test
+
 	}
 
 	@Test
