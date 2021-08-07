@@ -140,9 +140,9 @@ class ElectricCarServiceImplTest {
 	@Order(9)
 	void testDeleteAll() {
 		service.deleteAll();
-		assertEquals(0, electricService.count());
+		assertEquals(5, electricService.count());
 		service.deleteAll();
-		assertEquals(0, electricService.count());
+		assertEquals(5, electricService.count());
 		
 	}
 	
@@ -156,7 +156,7 @@ class ElectricCarServiceImplTest {
 				new Plug(4L, PlugType.TYPE2));
 				
 		assertEquals(car, electricService.save(car));
-		assertEquals(1L, car.getId());
+		assertEquals(7L, car.getId());
 
 	}
 
