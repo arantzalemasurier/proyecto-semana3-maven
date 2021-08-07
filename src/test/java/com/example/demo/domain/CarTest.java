@@ -73,7 +73,7 @@ class CarTest {
 		
 		ElectricCar car = new ElectricCar(80L, "Seat", "Ibiza", "rojo", 4, battery, air, motor, plug);
 		
-		assertEquals(80L, car.getBrand());
+		assertEquals("Seat", car.getBrand());
 	}
 
 	@Test
@@ -85,7 +85,7 @@ class CarTest {
 		
 		ElectricCar car = new ElectricCar(80L, "Seat", "Ibiza", "rojo", 4, battery, air, motor, plug);
 		
-		assertEquals(80L, car.getModel());
+		assertEquals("Ibiza", car.getModel());
 
 	}
 
@@ -98,7 +98,7 @@ class CarTest {
 		
 		ElectricCar car = new ElectricCar(80L, "Seat", "Ibiza", "rojo", 4, battery, air, motor, plug);
 		
-		assertEquals(80L, car.getColor());
+		assertEquals("rojo", car.getColor());
 	}
 
 	@Test
@@ -125,7 +125,7 @@ class CarTest {
 		
 		ElectricCar car = new ElectricCar(80L, "Seat", "Ibiza", "rojo", 4, battery, air, motor, plug);
 		
-		assertEquals(80L, car.getDoor());
+		assertEquals(4, car.getDoor());
 	}
 
 	@Test
