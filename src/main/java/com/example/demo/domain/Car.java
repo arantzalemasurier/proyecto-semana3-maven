@@ -6,7 +6,7 @@ import com.example.demo.domain.pieces.AirConditioning;
 import com.example.demo.domain.pieces.Battery;
 import com.example.demo.domain.pieces.Motor;
 
-public abstract class Car {
+public class Car {
 
 	private Long id;
 	private String brand;
