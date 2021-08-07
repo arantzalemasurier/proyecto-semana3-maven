@@ -19,6 +19,7 @@ import com.example.demo.domain.pieces.PlugType;
 public class ElectricCarServiceImpl implements ElectricCarService {
 
 	private static final Map<Long, ElectricCar> cars = new HashMap<>();
+	CarServiceImpl service = new CarServiceImpl();
 
 	static {
 
@@ -81,12 +82,6 @@ public class ElectricCarServiceImpl implements ElectricCarService {
     }
 
 	@Override
-    public void deleteAll() {
-        if (!cars.isEmpty())
-            cars.clear();
-    }
-
-	@Override
     public List<ElectricCar> findByColor(String color) {
     	List<ElectricCar> results = new ArrayList<ElectricCar>();
     	
@@ -124,6 +119,7 @@ public class ElectricCarServiceImpl implements ElectricCarService {
     		if (car.getMotor().getOn())
     				results.add(car);
     	return results;
-    }
+
+	}
 
 }

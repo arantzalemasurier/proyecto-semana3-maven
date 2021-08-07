@@ -15,8 +15,6 @@ public interface ElectricCarService {
     ElectricCar save(ElectricCar car);
 
     boolean delete(Long id);
-
-    void deleteAll();
     
     List<ElectricCar> findByColor(String color);
     

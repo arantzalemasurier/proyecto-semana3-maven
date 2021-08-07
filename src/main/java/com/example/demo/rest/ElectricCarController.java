@@ -16,6 +16,7 @@ import javax.ws.rs.core.Response;
 import org.springframework.stereotype.Component;
 
 import com.example.demo.domain.ElectricCar;
+import com.example.demo.service.CarServiceImpl;
 import com.example.demo.service.ElectricCarService;
 
 @Path("/ElectricCar")
@@ -25,6 +26,7 @@ import com.example.demo.service.ElectricCarService;
 public class ElectricCarController {
 
 	private ElectricCarService electricCarService;
+	CarServiceImpl service = new CarServiceImpl();
 
 	public ElectricCarController(ElectricCarService electricCarService) {
 		this.electricCarService = electricCarService;
@@ -125,7 +127,7 @@ public class ElectricCarController {
 
     @DELETE // Borraremos todos los vehículos electrico
     public Response deleteAll(){
-    	electricCarService.deleteAll();
+    	service.deleteAll();
         return Response.ok(Response.Status.OK).build();
     }
 	
