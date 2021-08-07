@@ -102,18 +102,26 @@ class CarTest {
 	}
 
 	@Test
-	void testGetBattery() {
-		battery = new Battery(1L, 14D);
-	}
-
-	@Test
-	void testGetAir() {
-		air = new AirConditioning(1L, 24F);
-	}
-
-	@Test
-	void testGetMotor() {
-		motor = new CombustionMotor (1L, 150F, FuelType.DIESEL, 1100F);
+	void testCombustionCar() {
+		
+			assertEquals(1L, car.getId());
+			assertEquals("Default brand", car.getBrand());
+			assertEquals("Default model", car.getModel());
+			assertEquals("Default color", car.getColor());
+			assertEquals(4, car.getDoor());
+			
+			assertTrue(car.getBattery() instanceof Battery);
+			assertEquals(1L, car.getBattery().getId());
+			assertNotEquals(15D, car.getBattery().getCapacity());
+			assertEquals(14D, car.getBattery().getCapacity());
+			
+			assertTrue(car.getAir() instanceof AirConditioning);
+			assertEquals(1L, car.getAir().getId());
+			assertEquals(24L, car.getAir().getTemperature());
+			
+			assertTrue(car.getMotor() instanceof Motor);
+			assertEquals(1L, car.getMotor().getId());
+			assertEquals(150, car.getMotor().getPower());
 	}
 
 	@Test
