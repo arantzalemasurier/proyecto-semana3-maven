@@ -116,8 +116,8 @@ class CarTest {
 		Battery testBattery = new Battery (2L, 14D);
 		car.setBattery(testBattery);
 		
-		assertEquals(car.getBattery().getId(),2L);
-		assertEquals(car.getBattery().getCapacity(),14D);
+		assertEquals(2L, car.getBattery().getId());
+		assertEquals(14D, car.getBattery().getCapacity());
 	}
 
 	@Test
@@ -125,8 +125,8 @@ class CarTest {
 		AirConditioning testAir = new AirConditioning (2L, 25F);
 		car.setAir(testAir);
 		
-		assertEquals(car.getAir().getId(),2L);
-		assertEquals(car.getAir().getTemperature(),25F);
+		assertEquals(2L, car.getAir().getId());
+		assertEquals(25F, car.getAir().getTemperature());
 		
 	}
 
@@ -135,14 +135,14 @@ class CarTest {
 		Motor testMotor = new Motor (2L, 120F);
 		car.setMotor(testMotor);
 		
-		assertEquals(car.getMotor().getId(),2L);
-		assertEquals(car.getMotor().getPower(),120F);
+		assertEquals(2L, car.getMotor().getId());
+		assertEquals(120F, car.getMotor().getPower());
 	}
 
 	@Test
 	void testSetDoor() {
 		car.setDoor(3);
-		assertEquals(car.getDoor(), 3);
+		assertEquals(3, car.getDoor());
 		
 	}
 
