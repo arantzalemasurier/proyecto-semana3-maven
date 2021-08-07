@@ -65,19 +65,6 @@ class CarTest {
 	}
 
 	@Test
-	void testGetBrand() {
-	}
-
-	@Test
-	void testGetModel() {
-
-	}
-
-	@Test
-	void testGetColor() {
-	}
-
-	@Test
 	void testGetBattery() {
 		battery = new Battery(1L, 14D);
 	}
