@@ -63,6 +63,43 @@ class CarTest {
 		
 		assertEquals(80L, car.getId());
 	}
+	
+	@Test
+	void testGetBrand() {
+		ElectricMotor motor = new ElectricMotor (2L, 120F, 40F);
+		Battery battery = new Battery (1L, 14D);
+		AirConditioning air = new AirConditioning (1L, 24F);
+		Plug plug = new Plug (1L, PlugType.TYPE1);
+		
+		ElectricCar car = new ElectricCar(80L, "Seat", "Ibiza", "rojo", 4, battery, air, motor, plug);
+		
+		assertEquals(80L, car.getBrand());
+	}
+
+	@Test
+	void testGetModel() {
+		ElectricMotor motor = new ElectricMotor (2L, 120F, 40F);
+		Battery battery = new Battery (1L, 14D);
+		AirConditioning air = new AirConditioning (1L, 24F);
+		Plug plug = new Plug (1L, PlugType.TYPE1);
+		
+		ElectricCar car = new ElectricCar(80L, "Seat", "Ibiza", "rojo", 4, battery, air, motor, plug);
+		
+		assertEquals(80L, car.getModel());
+
+	}
+
+	@Test
+	void testGetColor() {
+		ElectricMotor motor = new ElectricMotor (2L, 120F, 40F);
+		Battery battery = new Battery (1L, 14D);
+		AirConditioning air = new AirConditioning (1L, 24F);
+		Plug plug = new Plug (1L, PlugType.TYPE1);
+		
+		ElectricCar car = new ElectricCar(80L, "Seat", "Ibiza", "rojo", 4, battery, air, motor, plug);
+		
+		assertEquals(80L, car.getColor());
+	}
 
 	@Test
 	void testGetBattery() {
@@ -81,6 +118,14 @@ class CarTest {
 
 	@Test
 	void testGetDoor() {
+		ElectricMotor motor = new ElectricMotor (2L, 120F, 40F);
+		Battery battery = new Battery (1L, 14D);
+		AirConditioning air = new AirConditioning (1L, 24F);
+		Plug plug = new Plug (1L, PlugType.TYPE1);
+		
+		ElectricCar car = new ElectricCar(80L, "Seat", "Ibiza", "rojo", 4, battery, air, motor, plug);
+		
+		assertEquals(80L, car.getDoor());
 	}
 
 	@Test
