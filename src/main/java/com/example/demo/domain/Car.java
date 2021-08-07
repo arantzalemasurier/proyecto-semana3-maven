@@ -18,7 +18,7 @@ public abstract class Car {
 	private Motor motor;
 		
 	
-	protected Car(Long id, String brand, String model, String color, int door, Battery battery, AirConditioning air, Motor motor) {
+	public Car(Long id, String brand, String model, String color, int door, Battery battery, AirConditioning air, Motor motor) {
 		 this.id = id;
 		 this.brand = brand;
 		 this.model=model;
