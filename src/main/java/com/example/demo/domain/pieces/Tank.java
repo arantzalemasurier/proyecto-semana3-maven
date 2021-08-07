@@ -1,5 +1,6 @@
 package com.example.demo.domain.pieces;
 
+
 public class Tank {
 	
 	private Long id;
@@ -16,12 +17,6 @@ public class Tank {
 	
 	public Double getCapacity() {
 		return capacity;
-	}
-	
-	public void setId(Long id) {
-	}
-	
-	public void setCapacity(Double capacity) {
 	}
 	
 	@Override
