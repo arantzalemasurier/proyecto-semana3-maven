@@ -57,28 +57,28 @@ class ElectricCarTest {
 	@Test
 	void testElectricCar() {
 
-		assertEquals(car.getId(),1L);
-		assertEquals(car.getBrand(),"Default brand");
-		assertEquals(car.getModel(),"Default model");
-		assertEquals(car.getColor(),"Default color");
-		assertEquals(car.getDoor(),4);
+		assertEquals(1L, car.getId());
+		assertEquals("Default brand", car.getBrand());
+		assertEquals("Default model", car.getModel());
+		assertEquals("Default color", car.getColor());
+		assertEquals(4, car.getDoor());
 		
 		assertTrue(car.getBattery() instanceof Battery);
-		assertEquals(car.getBattery().getId(),1L);
-		assertNotEquals(car.getBattery().getCapacity(),15D);
-		assertEquals(car.getBattery().getCapacity(),14D);
+		assertEquals(1L, car.getBattery().getId());
+		assertNotEquals(15D, car.getBattery().getCapacity());
+		assertEquals(14D, car.getBattery().getCapacity());
 		
 		assertTrue(car.getAir() instanceof AirConditioning);
-		assertEquals(car.getAir().getId(),1L);
-		assertEquals(car.getAir().getTemperature(),24L);
+		assertEquals(1L, car.getAir().getId());
+		assertEquals(24L, car.getAir().getTemperature());
 		
 		assertTrue(car.getPlug() instanceof Plug);
-		assertEquals(car.getPlug().getId(),1L);
-		assertEquals(car.getPlug().getPlug(),PlugType.TYPE1);
+		assertEquals(1L, car.getPlug().getId());
+		assertEquals(PlugType.TYPE1, car.getPlug().getPlug());
 		
 		assertTrue(car.getMotor() instanceof Motor);
-		assertEquals(car.getMotor().getId(),1L);
-		assertEquals(car.getMotor().getPower(),150);
+		assertEquals(1L, car.getMotor().getId());
+		assertEquals(150, car.getMotor().getPower());
 
 	}
 		
@@ -88,8 +88,8 @@ class ElectricCarTest {
 		car.setPlug(testPlug);
 		
 		assertTrue(car.getPlug() instanceof Plug);
-		assertEquals(car.getPlug().getId(),200L);
-		assertEquals(car.getPlug().getPlug(),PlugType.TYPE2);
+		assertEquals(200L, car.getPlug().getId());
+		assertEquals(PlugType.TYPE2, car.getPlug().getPlug());
 		
 	}
 }

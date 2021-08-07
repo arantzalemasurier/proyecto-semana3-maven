@@ -87,8 +87,8 @@ class CombustionCarTest {
 		car.setTank(testTank);
 		
 		assertTrue(car.getTank() instanceof Tank);
-		assertEquals(car.getTank().getId(),100L);
-		assertEquals(car.getTank().getCapacity(),50D);
+		assertEquals(100L, car.getTank().getId());
+		assertEquals(50D, car.getTank().getCapacity());
 	}
 
 }

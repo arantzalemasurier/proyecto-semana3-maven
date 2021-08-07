@@ -56,14 +56,14 @@ class HybridCarTest {
 	@Test
 	void testHybridCar() {
 		
-		assertEquals(car.getId(),1L);
-		assertEquals(car.getBrand(),"Default brand");
-		assertEquals(car.getModel(),"Default model");
-		assertEquals(car.getColor(),"Default color");
-		assertEquals(car.getDoor(),4);
+		assertEquals(1L, car.getId());
+		assertEquals("Default brand", car.getBrand());
+		assertEquals("Default model", car.getModel());
+		assertEquals("Default color", car.getColor());
+		assertEquals(4, car.getDoor());
 		
 		assertTrue(car.getBattery() instanceof Battery);
-		assertEquals(car.getBattery().getId(),1L);
+		assertEquals(1L, car.getBattery().getId());
 		assertNotEquals(15D, car.getBattery().getCapacity());
 		assertEquals(14D, car.getBattery().getCapacity());
 		
