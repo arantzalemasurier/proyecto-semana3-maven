@@ -31,7 +31,7 @@ class CarFacadeTest {
 	@Test
 	void testCombustionCar() {
 		Car car = CarFacade.createCombustionCar();
-		assertEquals(car.toString(),"Car [id=1, brand=Default brand3, model=Default model, color=Default color, door=4"
+		assertEquals(car.toString(),"Car [id=1, brand=Seat, model=Default model, color=Default color, door=4"
 				+ ", battery=Battery [id=1, capacity=14.0]"
 				+ ", air=AirConditioning [id=1, on=true, temperature=24.0]"
 				+ ", motor=CombustionMotor [id=1, on=true, power=150.0, fuel=PETROL, cc=1000.0]"
@@ -41,7 +41,7 @@ class CarFacadeTest {
 	@Test
 	void testElectriCar() {
 		Car car = CarFacade.createElectricCar();
-		assertEquals(car.toString(),"Car [id=1, brand=Default brand1, model=Default model, color=Default color, door=4"
+		assertEquals(car.toString(),"Car [id=1, brand=Opel, model=Default model, color=Default color, door=4"
 				+ ", battery=Battery [id=1, capacity=14.0]"
 				+ ", air=AirConditioning [id=1, on=true, temperature=24.0]"
 				+ ", motor=ElectricMotor [id=1, on=true, power=150.0, voltage=400.0]"
@@ -51,7 +51,7 @@ class CarFacadeTest {
 	@Test
 	void testHybridCar() {
 		Car car = CarFacade.createHybridCar();
-		assertEquals(car.toString(),"Car [id=1, brand=Default brand2, model=Default model, color=Default color, door=4"
+		assertEquals(car.toString(),"Car [id=1, brand=Toyota, model=Default model, color=Default color, door=4"
 				+ ", battery=Battery [id=1, capacity=14.0]"
 				+ ", air=AirConditioning [id=1, on=true, temperature=24.0]"
 				+ ", motor=ElectricMotor [id=1, on=true, power=150.0]"
