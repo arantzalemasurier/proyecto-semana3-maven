@@ -26,7 +26,6 @@ public class CarFacade {
 		CombustionMotor motor = new CombustionMotor (1L, 150F, FuelType.PETROL, 1000F);
 		Tank tank = new Tank (1L, 60D);
 		
-		// car piezas exclusivas
 		CombustionCar car = new CombustionCar(1L, "Default brand", "Default model", "Default color", 4, battery, air, motor, tank);
 		car.getMotor().start();
 		car.getAir().start();
