@@ -20,7 +20,7 @@ public class CarFacade {
 	private CarFacade() {}
 	
 	public static Car createCombustionCar() {
-		// car piezas comunes
+
 		Battery battery = new Battery(1L, 14D);
 		AirConditioning air = new AirConditioning (1L, 24F);
 		CombustionMotor motor = new CombustionMotor (1L, 150F, FuelType.PETROL, 1000F);
