@@ -24,6 +24,7 @@ import com.example.demo.domain.pieces.PlugType;
 class ElectricCarServiceImplTest {
 	
 	static ElectricCarServiceImpl electricService;
+	CarServiceImpl service = new CarServiceImpl();
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -138,9 +139,9 @@ class ElectricCarServiceImplTest {
 	@Test
 	@Order(9)
 	void testDeleteAll() {
-		electricService.deleteAll();
+		service.deleteAll();
 		assertEquals(0, electricService.count());
-		electricService.deleteAll();
+		service.deleteAll();
 		assertEquals(0, electricService.count());
 		
 	}
