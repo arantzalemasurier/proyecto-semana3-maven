@@ -13,12 +13,10 @@ public class Motor {
 	}
 	
 	public void start() {
-		System.out.println("Encendiendo Motor");
 		this.on = true;
 	}
 	
 	public void stop() {
-		System.out.println("Apagando Motor");
 		this.on = false;
 	}	
 	

@@ -13,12 +13,10 @@ public class AirConditioning {
 	}
 	
 	public void start() {
-		System.out.println("Encendiendo aire acondicionado");
 		this.on = true;
 	}
 	
 	public void stop() {
-		System.out.println("Apagando aire acondicionado");
 		this.on = false;
 	}	
 	
