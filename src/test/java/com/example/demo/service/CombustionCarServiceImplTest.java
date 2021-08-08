@@ -134,7 +134,7 @@ class CombustionCarServiceImplTest {
 		assertFalse(combustionService.delete(null));
 		
 	}
-
+	
 	@Test
 	@Order(9)
 	void testDeleteAll() {

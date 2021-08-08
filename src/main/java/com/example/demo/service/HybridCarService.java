@@ -17,8 +17,8 @@ public interface HybridCarService {
     boolean delete(Long id);
 
     void deleteAll();
-	    
-	 List<HybridCar> findByColor(String color);
+
+    List<HybridCar> findByColor(String color);
     
     List<HybridCar> findByDoor(int door);
 

@@ -130,7 +130,7 @@ class HybridCarServiceImplTest {
 		assertFalse(hybridService.delete(null));
 		assertFalse(hybridService.delete(7L));
 	}
-
+	
 	@Test
 	@Order(9)
 	void testDeleteAll() {

@@ -78,12 +78,12 @@ public class HybridCarServiceImpl implements HybridCarService {
 		cars.remove(id);
 		return true;
 	}
-
+	
 	@Override
-	public void deleteAll() {
-		if (!cars.isEmpty())
-			cars.clear();
-	}
+    public void deleteAll() {
+        if (!cars.isEmpty())
+            cars.clear();
+    }
 
 	@Override
 	public List<HybridCar> findByColor(String color) {

@@ -80,12 +80,12 @@ public class CombustionCarServiceImpl implements CombustionCarService {
 		cars.remove(id);
 		return true;
 	}
-
-	@Override
-	public void deleteAll() {
-		if (!cars.isEmpty())
-			cars.clear();
-	}
+	
+    @Override
+    public void deleteAll() {
+        if (!cars.isEmpty())
+            cars.clear();
+    }
 
 	@Override
 	public List<CombustionCar> findByColor(String color) {

@@ -16,7 +16,7 @@ public interface CombustionCarService {
     boolean delete(Long id);
 
     void deleteAll();
-    
+
     List<CombustionCar> findByColor(String color);
     
     List<CombustionCar> findByDoor(int door);
