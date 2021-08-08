@@ -120,11 +120,11 @@ public class ElectricCarServiceImpl implements ElectricCarService {
     public List<ElectricCar> findStarted() {
 		var results = new ArrayList<ElectricCar>();
     	
-    	for (ElectricCar car: cars.values())
-    		if (car.getMotor().getOn())
-    				results.add(car);
-    	return results;
-
+		for (ElectricCar car : cars.values())
+			if (car.getMotor().getOn() != null && car.getMotor().getOn()) {
+				
+				results.add(car);
+			}
+		return results;
 	}
-
 }

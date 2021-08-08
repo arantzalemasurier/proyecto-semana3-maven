@@ -120,9 +120,10 @@ public class HybridCarServiceImpl implements HybridCarService {
 		var results = new ArrayList<HybridCar>();
 
 		for (HybridCar car : cars.values())
-			if (car.getMotor().getOn())
+			if (car.getMotor().getOn() != null && car.getMotor().getOn()) {
+				
 				results.add(car);
+			}
 		return results;
 	}
-
 }
