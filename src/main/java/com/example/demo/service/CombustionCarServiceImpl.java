@@ -87,9 +87,9 @@ public class CombustionCarServiceImpl implements CombustionCarService {
             cars.clear();
     }
 
-	@Override
+    @Override
 	public List<CombustionCar> findByColor(String color) {
-		List<CombustionCar> results = new ArrayList<CombustionCar>();
+		var results = new ArrayList<CombustionCar>();
 
 		for (CombustionCar car : cars.values())
 			if (car.getColor().equals(color))
