@@ -8,7 +8,6 @@ import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.domain.ElectricCar;
 import com.example.demo.domain.HybridCar;
 import com.example.demo.domain.pieces.AirConditioning;
 import com.example.demo.domain.pieces.Battery;

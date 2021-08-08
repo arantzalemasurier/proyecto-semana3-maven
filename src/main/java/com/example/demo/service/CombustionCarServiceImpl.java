@@ -122,8 +122,11 @@ public class CombustionCarServiceImpl implements CombustionCarService {
 		var results = new ArrayList<CombustionCar>();
 
 		for (CombustionCar car : cars.values())
-			if (car.getMotor().getOn())
+			if (car.getMotor().getOn() != null && car.getMotor().getOn()) {
+				
+				Boolean.TRUE.equals(car.getMotor().getOn());	
 				results.add(car);
+			}
 		return results;
 	}
 }
