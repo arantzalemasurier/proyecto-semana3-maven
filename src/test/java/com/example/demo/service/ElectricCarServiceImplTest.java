@@ -17,7 +17,7 @@ import com.example.demo.domain.ElectricCar;
 import com.example.demo.domain.pieces.AirConditioning;
 import com.example.demo.domain.pieces.Battery;
 import com.example.demo.domain.pieces.ElectricMotor;
-import com.example.demo.domain.pieces.Plug;
+import com.example.demo.domain.pieces.ElectricPlug;
 import com.example.demo.domain.pieces.PlugType;
 
 @TestMethodOrder(OrderAnnotation.class)
@@ -70,7 +70,7 @@ class ElectricCarServiceImplTest {
 				new Battery(1L, 15D),
 				new AirConditioning(3L, 25F),
 				new ElectricMotor(4L, 140F, 500F),
-				new Plug(4L, PlugType.TYPE2));
+				new ElectricPlug(4L, PlugType.TYPE2));
 				
 		assertEquals(car, electricService.save(car));
 		
@@ -78,7 +78,7 @@ class ElectricCarServiceImplTest {
 				new Battery(1L, 15D),
 				new AirConditioning(3L, 25F),
 				new ElectricMotor(4L, 140F, 500F),
-				new Plug(4L, PlugType.TYPE2));
+				new ElectricPlug(4L, PlugType.TYPE2));
 		
 		assertEquals(car, electricService.save(car));
 				
@@ -86,7 +86,7 @@ class ElectricCarServiceImplTest {
 				new Battery(1L, 15D),
 				new AirConditioning(3L, 25F),
 				new ElectricMotor(4L, 140F, 500F),
-				new Plug(4L, PlugType.TYPE2));
+				new ElectricPlug(4L, PlugType.TYPE2));
 		
 		assertEquals(car, electricService.save(car));	
 	}
@@ -152,7 +152,7 @@ class ElectricCarServiceImplTest {
 				new Battery(1L, 15D),
 				new AirConditioning(3L, 25F),
 				new ElectricMotor(1L, 150F, 400F),
-				new Plug(4L, PlugType.TYPE2));
+				new ElectricPlug(4L, PlugType.TYPE2));
 				
 		assertEquals(car, electricService.save(car));
 		assertEquals(1L, car.getId());

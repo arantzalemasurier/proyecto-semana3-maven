@@ -11,7 +11,7 @@ import com.example.demo.domain.pieces.ElectricMotor;
 import com.example.demo.domain.pieces.FuelType;
 import com.example.demo.domain.pieces.HybridMotor; 
 import com.example.demo.domain.pieces.HydrogenTank;
-import com.example.demo.domain.pieces.Plug;
+import com.example.demo.domain.pieces.ElectricPlug;
 import com.example.demo.domain.pieces.PlugType;
 import com.example.demo.domain.pieces.Tank;
 
@@ -41,7 +41,7 @@ public class CarFacade {
 		Battery battery = new Battery(1L, 14D);
 		AirConditioning air = new AirConditioning (1L, 24F);
 		ElectricMotor motor = new ElectricMotor (1L, 150F, 400F);
-		Plug plug = new Plug (1L, PlugType.TYPE1);
+		ElectricPlug plug = new ElectricPlug (1L, PlugType.TYPE1);
 		
 		ElectricCar car = new ElectricCar(1L, DEFAULT_BRAND, DEFAULT_MODEL, DEFAULT_COLOR, 4, battery, air, motor, plug);
 		car.getMotor().start();

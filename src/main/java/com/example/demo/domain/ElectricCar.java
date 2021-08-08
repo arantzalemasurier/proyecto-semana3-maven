@@ -3,22 +3,22 @@ package com.example.demo.domain;
 import com.example.demo.domain.pieces.AirConditioning;
 import com.example.demo.domain.pieces.Battery;
 import com.example.demo.domain.pieces.ElectricMotor;
-import com.example.demo.domain.pieces.Plug;
+import com.example.demo.domain.pieces.ElectricPlug;
 
 public class ElectricCar extends Car {
 
-	private Plug plug;
+	private ElectricPlug plug;
 	
-	public ElectricCar(Long id, String brand, String model, String color, int door, Battery battery, AirConditioning air, ElectricMotor motor, Plug plug) {
+	public ElectricCar(Long id, String brand, String model, String color, int door, Battery battery, AirConditioning air, ElectricMotor motor, ElectricPlug plug) {
 		super(id, brand, model, color, door, battery, air, motor);
 		this.plug = plug;
 	}
 	
-	public Plug getPlug() {
+	public ElectricPlug getPlug() {
 		return plug;
 	}
 
-	public void setPlug(Plug plug) {
+	public void setPlug(ElectricPlug plug) {
 		this.plug = plug;
 	}
 	

@@ -1,11 +1,11 @@
 package com.example.demo.domain.pieces;
 
-public class Plug {
+public class ElectricPlug {
 	
 	private Long id;
 	private PlugType plug;
 	
-	public Plug(Long id, PlugType plug) {
+	public ElectricPlug(Long id, PlugType plug) {
 		this.id = id;
 		this.plug = plug;
 	}

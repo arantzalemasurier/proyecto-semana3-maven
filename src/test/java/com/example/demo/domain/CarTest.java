@@ -14,7 +14,7 @@ import com.example.demo.domain.pieces.CombustionMotor;
 import com.example.demo.domain.pieces.ElectricMotor;
 import com.example.demo.domain.pieces.FuelType;
 import com.example.demo.domain.pieces.Motor;
-import com.example.demo.domain.pieces.Plug;
+import com.example.demo.domain.pieces.ElectricPlug;
 import com.example.demo.domain.pieces.PlugType;
 import com.example.demo.domain.pieces.Tank;
 
@@ -74,7 +74,7 @@ class CarTest {
 		ElectricMotor motor = new ElectricMotor (2L, 120F, 40F);
 		Battery battery = new Battery (1L, 14D);
 		AirConditioning air = new AirConditioning (1L, 24F);
-		Plug plug = new Plug (1L, PlugType.TYPE1);
+		ElectricPlug plug = new ElectricPlug (1L, PlugType.TYPE1);
 		
 		ElectricCar car = new ElectricCar(80L, "Seat", "Ibiza", "rojo", 4, battery, air, motor, plug);
 		
@@ -86,7 +86,7 @@ class CarTest {
 		ElectricMotor motor = new ElectricMotor (2L, 120F, 40F);
 		Battery battery = new Battery (1L, 14D);
 		AirConditioning air = new AirConditioning (1L, 24F);
-		Plug plug = new Plug (1L, PlugType.TYPE1);
+		ElectricPlug plug = new ElectricPlug (1L, PlugType.TYPE1);
 		
 		ElectricCar car = new ElectricCar(80L, "Seat", "Ibiza", "rojo", 4, battery, air, motor, plug);
 		
@@ -98,7 +98,7 @@ class CarTest {
 		ElectricMotor motor = new ElectricMotor (2L, 120F, 40F);
 		Battery battery = new Battery (1L, 14D);
 		AirConditioning air = new AirConditioning (1L, 24F);
-		Plug plug = new Plug (1L, PlugType.TYPE1);
+		ElectricPlug plug = new ElectricPlug (1L, PlugType.TYPE1);
 		
 		ElectricCar car = new ElectricCar(80L, "Seat", "Ibiza", "rojo", 4, battery, air, motor, plug);
 		
@@ -111,7 +111,7 @@ class CarTest {
 		ElectricMotor motor = new ElectricMotor (2L, 120F, 40F);
 		Battery battery = new Battery (1L, 14D);
 		AirConditioning air = new AirConditioning (1L, 24F);
-		Plug plug = new Plug (1L, PlugType.TYPE1);
+		ElectricPlug plug = new ElectricPlug (1L, PlugType.TYPE1);
 		
 		ElectricCar car = new ElectricCar(80L, "Seat", "Ibiza", "rojo", 4, battery, air, motor, plug);
 		
@@ -123,7 +123,7 @@ class CarTest {
 		ElectricMotor motor = new ElectricMotor (2L, 120F, 40F);
 		Battery battery = new Battery (1L, 14D);
 		AirConditioning air = new AirConditioning (1L, 24F);
-		Plug plug = new Plug (1L, PlugType.TYPE1);
+		ElectricPlug plug = new ElectricPlug (1L, PlugType.TYPE1);
 		
 		ElectricCar car = new ElectricCar(80L, "Seat", "Ibiza", "rojo", 4, battery, air, motor, plug);
 		

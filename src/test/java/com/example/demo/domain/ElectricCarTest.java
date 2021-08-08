@@ -12,7 +12,7 @@ import com.example.demo.domain.pieces.AirConditioning;
 import com.example.demo.domain.pieces.Battery;
 import com.example.demo.domain.pieces.ElectricMotor;
 import com.example.demo.domain.pieces.Motor;
-import com.example.demo.domain.pieces.Plug;
+import com.example.demo.domain.pieces.ElectricPlug;
 import com.example.demo.domain.pieces.PlugType;
 
 class ElectricCarTest {
@@ -20,7 +20,7 @@ class ElectricCarTest {
 	static Battery battery;
 	static	AirConditioning air;
 	static ElectricMotor motor;
-	static Plug plug;
+	static ElectricPlug plug;
 	static ElectricCar car;
 
 	@BeforeAll
@@ -28,7 +28,7 @@ class ElectricCarTest {
 		battery = new Battery(1L, 14D);
 		air = new AirConditioning (1L, 24F);
 		motor = new ElectricMotor (1L, 150F, 400F);
-		plug = new Plug (1L, PlugType.TYPE1);
+		plug = new ElectricPlug (1L, PlugType.TYPE1);
 	}
 
 	@AfterAll
@@ -72,7 +72,7 @@ class ElectricCarTest {
 		assertEquals(1L, car.getAir().getId());
 		assertEquals(24L, car.getAir().getTemperature());
 		
-		assertTrue(car.getPlug() instanceof Plug);
+		assertTrue(car.getPlug() instanceof ElectricPlug);
 		assertEquals(1L, car.getPlug().getId());
 		assertEquals(PlugType.TYPE1, car.getPlug().getPlug());
 		
@@ -84,10 +84,10 @@ class ElectricCarTest {
 		
 	@Test
 	void testSetPlug() {
-		Plug testPlug = new Plug (200L, PlugType.TYPE2);
+		ElectricPlug testPlug = new ElectricPlug (200L, PlugType.TYPE2);
 		car.setPlug(testPlug);
 		
-		assertTrue(car.getPlug() instanceof Plug);
+		assertTrue(car.getPlug() instanceof ElectricPlug);
 		assertEquals(200L, car.getPlug().getId());
 		assertEquals(PlugType.TYPE2, car.getPlug().getPlug());
 		
