@@ -17,16 +17,20 @@ import com.example.demo.domain.pieces.Tank;
 
 public class CarFacade {
 	
+	public static final String DEFAULT_BRAND = "Default brand";
+	public static final String DEFAULT_MODEL = "Default model";
+	public static final String DEFAULT_COLOR = "Default color";
+
 	private CarFacade() {}
 	
 	public static Car createCombustionCar() {
-
+		
 		Battery battery = new Battery(1L, 14D);
 		AirConditioning air = new AirConditioning (1L, 24F);
 		CombustionMotor motor = new CombustionMotor (1L, 150F, FuelType.PETROL, 1000F);
 		Tank tank = new Tank (1L, 60D);
 		
-		CombustionCar car = new CombustionCar(1L, "Default brand", "Default model", "Default color", 4, battery, air, motor, tank);
+		CombustionCar car = new CombustionCar(1L, DEFAULT_BRAND, DEFAULT_MODEL, DEFAULT_COLOR, 4, battery, air, motor, tank);
 		car.getMotor().start();
 		car.getAir().start();
 		
@@ -39,7 +43,7 @@ public class CarFacade {
 		ElectricMotor motor = new ElectricMotor (1L, 150F, 400F);
 		Plug plug = new Plug (1L, PlugType.TYPE1);
 		
-		ElectricCar car = new ElectricCar(1L, "Default brand", "Default model", "Default color", 4, battery, air, motor, plug);
+		ElectricCar car = new ElectricCar(1L, DEFAULT_BRAND, DEFAULT_MODEL, DEFAULT_COLOR, 4, battery, air, motor, plug);
 		car.getMotor().start();
 		car.getAir().start();
 		
@@ -52,7 +56,7 @@ public class CarFacade {
 		HybridMotor motor = new HybridMotor (1L, 150F);
 		HydrogenTank tank = new HydrogenTank (1L, 80D);
 	
-		HybridCar car = new HybridCar(1L, "Default brand", "Default model", "Default color", 4, battery, air, motor, tank);
+		HybridCar car = new HybridCar(1L, DEFAULT_BRAND, DEFAULT_MODEL, DEFAULT_COLOR, 4, battery, air, motor, tank);
 		car.getMotor().start();
 		car.getAir().start();
 		
