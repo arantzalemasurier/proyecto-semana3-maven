@@ -99,7 +99,7 @@ public class CombustionCarServiceImpl implements CombustionCarService {
 
 	@Override
 	public List<CombustionCar> findByDoor(int door) {
-		List<CombustionCar> results = new ArrayList<CombustionCar>();
+		var results = new ArrayList<CombustionCar>();
 
 		for (CombustionCar car : cars.values())
 			if (car.getDoor() == (door))
@@ -109,7 +109,7 @@ public class CombustionCarServiceImpl implements CombustionCarService {
 
 	@Override
 	public List<CombustionCar> findByBrand(String brand) {
-		List<CombustionCar> results = new ArrayList<CombustionCar>();
+		var results = new ArrayList<CombustionCar>();
 
 		for (CombustionCar car : cars.values())
 			if (car.getBrand().equals(brand))
@@ -119,7 +119,7 @@ public class CombustionCarServiceImpl implements CombustionCarService {
 
 	@Override
 	public List<CombustionCar> findStarted() {
-		List<CombustionCar> results = new ArrayList<CombustionCar>();
+		var results = new ArrayList<CombustionCar>();
 
 		for (CombustionCar car : cars.values())
 			if (car.getMotor().getOn())

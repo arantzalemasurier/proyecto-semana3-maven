@@ -8,6 +8,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
+import com.example.demo.domain.ElectricCar;
 import com.example.demo.domain.HybridCar;
 import com.example.demo.domain.pieces.AirConditioning;
 import com.example.demo.domain.pieces.Battery;
@@ -87,7 +88,7 @@ public class HybridCarServiceImpl implements HybridCarService {
 
 	@Override
 	public List<HybridCar> findByColor(String color) {
-		List<HybridCar> results = new ArrayList<HybridCar>();
+		var results = new ArrayList<HybridCar>();
 
 		for (HybridCar car : cars.values())
 			if (car.getColor().equals(color))
@@ -97,7 +98,7 @@ public class HybridCarServiceImpl implements HybridCarService {
 
 	@Override
 	public List<HybridCar> findByDoor(int door) {
-		List<HybridCar> results = new ArrayList<HybridCar>();
+		var results = new ArrayList<HybridCar>();
 
 		for (HybridCar car : cars.values())
 			if (car.getDoor() == (door))
@@ -107,7 +108,7 @@ public class HybridCarServiceImpl implements HybridCarService {
 
 	@Override
 	public List<HybridCar> findByBrand(String brand) {
-		List<HybridCar> results = new ArrayList<HybridCar>();
+		var results = new ArrayList<HybridCar>();
 
 		for (HybridCar car : cars.values())
 			if (car.getBrand().equals(brand))
@@ -117,7 +118,7 @@ public class HybridCarServiceImpl implements HybridCarService {
 
 	@Override
 	public List<HybridCar> findStarted() {
-		List<HybridCar> results = new ArrayList<HybridCar>();
+		var results = new ArrayList<HybridCar>();
 
 		for (HybridCar car : cars.values())
 			if (car.getMotor().getOn())
