@@ -124,7 +124,6 @@ public class CombustionCarServiceImpl implements CombustionCarService {
 		for (CombustionCar car : cars.values())
 			if (car.getMotor().getOn() != null && car.getMotor().getOn()) {
 				
-				Boolean.TRUE.equals(car.getMotor().getOn());	
 				results.add(car);
 			}
 		return results;
