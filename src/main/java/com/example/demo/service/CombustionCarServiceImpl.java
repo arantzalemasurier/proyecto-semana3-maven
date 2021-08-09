@@ -118,7 +118,7 @@ public class CombustionCarServiceImpl implements CombustionCarService {
 	}
 
 	@Override
-	public List<CombustionCar> findStarted() {
+	public List<CombustionCar> findStarted() { 
 		var results = new ArrayList<CombustionCar>();
 
 		for (CombustionCar car : cars.values())
